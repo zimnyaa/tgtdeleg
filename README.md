@@ -6,9 +6,11 @@ all credit to @connormcgarr
 meant for living-above-the-land while avoiding `execute-assembly` as much as possible.
 
 
-## usage
+#### install
 install with `extensions load <folder>`&`extensions install <folder>`
-use:
+
+
+#### use
 ```
 sliver (SESSION)> tgtdeleg 0 currentdomain default
 # in a separate console
