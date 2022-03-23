@@ -1,0 +1,44 @@
+{
+    "name": "tgtdeleg",
+    "version": "0.0.1",
+    "command_name": "tgtdeleg",
+    "extension_author": "zimnyaa",
+    "original_author": "connormcgarr",
+    "repo_url": "https://github.com/zimnyaa/tgtdeleg",
+    "help": "Obtain a delegation TGT",
+    "long_help": "Uses the Rubeus/Kekeo trick to obtain a TGT for the current user (non-elevated). Requires additional decryption afterwards with https://github.com/connormcgarr/tgtdelegation/tree/master/tgtParse",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+        {
+          "os": "windows",  
+          "arch": "amd64",
+          "path": "tgtdelegation.x64.o"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "path": "tgtdelegation.x86.o"
+        }
+    ],
+    "arguments": [
+      {
+      "name": "uniqueid",
+      "desc": "anything (int)",
+      "type": "int",
+      "optional": false
+    },
+    {
+      "name": "domain",
+      "desc": "domain name|\"currentdomain\"",
+      "type": "wstring",
+      "optional": false
+    },
+    {
+      "name": "spn",
+      "desc": "spn|\"default\"",
+      "type": "wstring",
+      "optional": false
+    }
+    ]
+}
